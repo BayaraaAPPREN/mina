@@ -14,7 +14,7 @@ import DialogJob from '../../components/DialogJob';
       };
     return(
         <div className=''>
-            <div class="min-h-screen justify-center bg-[url('/img/backno.png')]">
+            <div className="min-h-screen justify-center bg-[url('/img/backno.png')]">
                     <div className='grid sm:grid-cols-1 md:grid-cols-5 font-serif justify-center'>
                         <div className='grid col-span-1 sm:invisible md:visible md:block sm:hidden'></div>
                         <div className='grid col-span-1  m-4 '>

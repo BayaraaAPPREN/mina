@@ -3,11 +3,7 @@
 
 
 import Navbar from "../../components/Navbar";
-import { BsFlower1 } from 'react-icons/bs';
 import {BsFlower2} from 'react-icons/bs'
-import ServiceCard from "../../components/ServiceCard";
-import Slider from "../../components/Slider";
-import Carousel from "../../components/Carousel";
 import AboutSec from "../../components/AboutSec";
 import About1sec from "../../components/About1sec";
 import Team from "../../components/Team";
@@ -18,9 +14,7 @@ export default function Aboutus(){
         <div>
             <Navbar/>
             <div className="bg-back mt-1">
-                        <link rel="preconnect" href="https://fonts.googleapis.com"/>
-                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-                        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Gentium+Plus&family=Great+Vibes&family=Hurricane&display=swap" rel="stylesheet"></link>
+          
               <div className=" grid sm:grid-cols-2 md:grid-cols-5 row-1">
                   <div className=" grid sm:col-span-1 md:col-span-2">
                      <img src="/img/pone.png"/>

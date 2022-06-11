@@ -1,6 +1,5 @@
 import Navbar from "../../components/Navbar";
 import { BsFlower1 } from 'react-icons/bs';
-import ServiceCard from "../../components/ServiceCard";
 import ProductService from "../../components/ProductService";
 
 
@@ -9,9 +8,7 @@ export default function Service(){
         <div>
             <Navbar/>
             <div className="bg-back mt-1">
-                        <link rel="preconnect" href="https://fonts.googleapis.com"/>
-                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-                        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Gentium+Plus&family=Great+Vibes&family=Hurricane&display=swap" rel="stylesheet"></link>
+                       
               <div className=" grid grid-cols-5 row-1">
                   <div className=" grid col-span-2">
                      <img src="/img/pone.png"/>
@@ -87,9 +84,9 @@ export default function Service(){
                         </div>
                     </div>
                     <h1 className="font-hurricane text-3xl text-center ">Easy to Give. Delicious to Enjoy</h1>
-                    <div>
+                    {/* <div>
                        <ServiceCard/>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

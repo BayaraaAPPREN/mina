@@ -53,7 +53,7 @@ export default function DialogModal() {
                     Payment successful
                   </Dialog.Title>
                   <div className="mt-2">
-                    <iframe class="w-full aspect-video ..." src="https://https://www.youtube.com/watch?v=Wp2uWNmHLlU/..."></iframe>
+                    <iframe className="w-full aspect-video ..." src="https://https://www.youtube.com/watch?v=Wp2uWNmHLlU/..."></iframe>
                   </div>
 
                   <div className="mt-4">

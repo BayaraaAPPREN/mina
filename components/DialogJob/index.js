@@ -112,7 +112,7 @@ function logValue() {
                   </Dialog.Title>
                   <div className="mt-2 text-sm text-gray-500">
                     <h1 className='mb-2'>Гарчиг</h1>
-                    <input id="title" type="text" name="title" class="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Гарчиг"
+                    <input id="title" type="text" name="title" className="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Гарчиг"
                     value={zar.title}
                     onChange={ e => setZar({...zar, title:e.target.value})}
                     />
@@ -120,7 +120,7 @@ function logValue() {
 
                   <div className="mt-2 text-sm text-gray-500">
                     <h1 className='mb-2'>Нэмэлт мэдээлэл</h1>
-                    <textarea id="title" type="text" name="title" class="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Нэмэлт мэдээлэл" 
+                    <textarea id="title" type="text" name="title" className="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Нэмэлт мэдээлэл" 
                     value={zar.detail}
                     onChange={ e => setZar({...zar, detail:e.target.value})}
                     />
@@ -148,14 +148,14 @@ function logValue() {
 
                   <div className="mt-2 text-sm text-gray-500">
                     <h1 className='mb-2'>Цагын ажлын хөлс</h1>
-                    <input id="title" type="text" name="title" class="text-sm placeholder:text-xs sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" 
+                    <input id="title" type="text" name="title" className="text-sm placeholder:text-xs sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" 
                     value={zar.jobSalary}
                     onChange={ e => setZar({...zar, jobSalary:e.target.value})}
                     placeholder="Цагын ажлын хөлс" />
                   </div>
                   <div className="mt-2 text-sm text-gray-500">
                     <h1 className='mb-2'>Зарын хэлбэр</h1>
-                    <select id="title" type="text" name="title" class="text-sm placeholder:text-xs sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Ажлын зар бол ажлын хөлс / Түрээсийн зар бол түрээслэх үнэ" 
+                    <select id="title" type="text" name="title" className="text-sm placeholder:text-xs sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Ажлын зар бол ажлын хөлс / Түрээсийн зар бол түрээслэх үнэ" 
                     value={zar.type}
                     onChange={ e => setZar({...zar, type:e.target.value})}
                     >
