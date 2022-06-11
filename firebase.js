@@ -1,17 +1,16 @@
-// Import the functions you need from the SDKs you need
+  // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth, GoogleAuthProvider } from 'firebase/auth'
 import { getStorage } from 'firebase/storage'
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDPCh4x0cNnHLvT3-hxeiX7jK5Ib-drhmE",
-    authDomain: "skinlaundry-af34f.firebaseapp.com",
-    projectId: "skinlaundry-af34f",
-    storageBucket: "skinlaundry-af34f.appspot.com",
-    messagingSenderId: "785850577591",
-    appId: "1:785850577591:web:7ae12c9dc62af1b5ca1332",
-    measurementId: "G-LK57F1LM8J"
+    apiKey: "AIzaSyBGJYJaku5FjJH-4bowtVBfQA3SErgW3DQ",
+  authDomain: "mina-498b8.firebaseapp.com",
+  projectId: "mina-498b8",
+  storageBucket: "mina-498b8.appspot.com",
+  messagingSenderId: "1077475056220",
+  appId: "1:1077475056220:web:7cc1f55d4cecc6fce1a499"
 };
 
 // Initialize Firebase
