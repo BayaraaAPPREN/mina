@@ -1720,7 +1720,7 @@
   dependencies:
     "locate-path" "^2.0.0"
 
-"firebase-admin@^10.3.0", "firebase-admin@^8.0.0 || ^9.0.0 || ^10.0.0":
+"firebase-admin@^8.0.0 || ^9.0.0 || ^10.0.0":
   "integrity" "sha512-A0wgMLEjyVyUE+heyMJYqHRkPVjpebhOYsa47RHdrTM4ltApcx8Tn86sUmjqxlfh09gNnILAm7a8q5+FmgBYpg=="
   "resolved" "https://registry.npmjs.org/firebase-admin/-/firebase-admin-10.3.0.tgz"
   "version" "10.3.0"
@@ -2622,6 +2622,11 @@
   "integrity" "sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q=="
   "resolved" "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz"
   "version" "1.2.6"
+
+"moment@^2.29.3":
+  "integrity" "sha512-c6YRvhEo//6T2Jz/vVtYzqBzwvPT95JBQ+smCytzf7c50oMZRsR/a4w88aD34I+/QVSfnoAnSBFPJHItlOMJVw=="
+  "resolved" "https://registry.npmjs.org/moment/-/moment-2.29.3.tgz"
+  "version" "2.29.3"
 
 "ms@^2.1.1", "ms@2.1.2":
   "integrity" "sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w=="

@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com");
+@import url("https://fonts.gstatic.com");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Gentium+Plus&family=Great+Vibes&family=Hurricane&family=Roboto&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

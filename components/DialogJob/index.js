@@ -5,13 +5,11 @@ import { addDoc, collection, serverTimestamp } from "@firebase/firestore"
 import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 import { storage } from "../../firebase";
 
-export default function DialogJob() {
+ function DialogJob() {
   const [zar, setZar] = useState({ title: "", detail: "", jobSalary: "", type: "", img: ""});
   const [imgUrl, setImgUrl] = useState(null);
   const [progresspercent, setProgresspercent] = useState(0);
   let [isOpen, setIsOpen] = useState(false)
-  const [value, setValue] = useState("");
-  const [sort, setSort] = useState("");
 
   const onSubmit = async () => {
    
@@ -69,13 +67,13 @@ function logValue() {
 
   return (
     <>
-      <div className="mt-4">
+      <div className="">
         <button
           type="button"
           onClick={openModal}
-          className="rounded-md bg-lime-500 px-2 py-2 text-sm font-medium text-white hover:bg-lime-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 "
+          className="rounded-md bg-lime-500 text-sm font-medium text-white hover:bg-lime-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 "
         >
-            Цагийн ажлын зар оруулах
+            Нэмэх
         </button>
       </div>
       <Transition appear show={isOpen} as={Fragment}>
@@ -106,19 +104,19 @@ function logValue() {
                 <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                   <Dialog.Title
                     as="h3"
-                    className="text-lg font-medium leading-6 text-gray-900"
+                    className="text-lg font-medium leading-6 text-gray"
                   >
                     Цагын ажлын зараа оруулаарай
                   </Dialog.Title>
-                  <div className="mt-2 text-sm text-gray-500">
+                  <div className="mt-2 text-sm text-gray">
                     <h1 className='mb-2'>Гарчиг</h1>
-                    <input id="title" type="text" name="title" className="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Гарчиг"
+                    <input id="title" type="text" name="title" className="text-sm sm:text-base placeholder-graybudeg pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Гарчиг"
                     value={zar.title}
                     onChange={ e => setZar({...zar, title:e.target.value})}
                     />
                   </div>
 
-                  <div className="mt-2 text-sm text-gray-500">
+                  <div className="mt-2 text-sm text-gray">
                     <h1 className='mb-2'>Нэмэлт мэдээлэл</h1>
                     <textarea id="title" type="text" name="title" className="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Нэмэлт мэдээлэл" 
                     value={zar.detail}
@@ -135,7 +133,7 @@ function logValue() {
                         setZar({...zar, img:e.target.value})
                       }
                       />
-                      <button type='submit' className='bg-lime-600 text-white hover:bg-lime-800 transition delay-75 rounded-sm py-2 px-4'>Дараарай</button>
+                      <button type='submit' className='bg-nogoon text-white hover:bg-green transition delay-75 rounded-sm py-2 px-4'>Дараарай</button>
                     </form>
                     { 
                       !imgUrl &&
@@ -147,11 +145,11 @@ function logValue() {
                   </div>
 
                   <div className="mt-2 text-sm text-gray-500">
-                    <h1 className='mb-2'>Цагын ажлын хөлс</h1>
+                    <h1 className='mb-2'>Бүтээгдэхүүний үнэ</h1>
                     <input id="title" type="text" name="title" className="text-sm placeholder:text-xs sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" 
                     value={zar.jobSalary}
                     onChange={ e => setZar({...zar, jobSalary:e.target.value})}
-                    placeholder="Цагын ажлын хөлс" />
+                    placeholder="Бүтээгдэхүүний үнэ" />
                   </div>
                   <div className="mt-2 text-sm text-gray-500">
                     <h1 className='mb-2'>Зарын хэлбэр</h1>
@@ -160,22 +158,22 @@ function logValue() {
                     onChange={ e => setZar({...zar, type:e.target.value})}
                     >
                       <option selected value="CHECK" className='rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400 '>Сонгоорой</option>
-                      <option value="SUPERMARKET" className='rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400 '>Дэлгүүр орох</option>
-                      <option value="PAPER" className='rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400 '> Бичиг баримт хүргэлт </option>
-                      <option value="BUSAD" className='rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400 '>Бусад</option>
+                      <option value="SUPERMARKET" className='rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400 '>Батганы эсрэг</option>
+                      <option value="PAPER" className='rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400 '> Онцлох </option>
+                      <option value="BUSAD" className='rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400 '>Тос</option>
                     </select>
                   </div>
 
                   <div className="mt-4 grid justify-center  ">
                     <button
                       type="button"
-                      className="inline-flex justify-center rounded-md border border-transparent bg-blue-200 px-20 py-2 text-sm font-medium transition delay-75 text-blue-900 hover:bg-lime-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      className="inline-flex justify-center rounded-md border border-transparent bg-back px-20 py-2 text-sm font-medium transition delay-75 text-blue-900 hover:bg-nogoon hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                       onClick={onSubmit}
                     >
                       Нийтлэх
                     </button>
                   </div>
-                </Dialog.Panel>
+                </Dialog.Panel>  
               </Transition.Child>
             </div>
           </div>
@@ -184,3 +182,5 @@ function logValue() {
     </>
   )
 }
+
+export default DialogJob

@@ -1,19 +1,17 @@
 
-import { BsFlower1 } from 'react-icons/bs';
+import { BsFlower2 } from 'react-icons/bs';
 export default function ProductService(){
     return(
         <div>
                 <div>
                     <h1 className="text-center mt-10 text-2xl font-gentium">Welcome to Skin Laundry</h1>
-                    <div className="grid justify-center my-2">
-                        <div className="flex items-center">
-                            <div className="inline-block">
-                                <div className="inline-block">
-                                <BsFlower1 color="fuchsia"  size={15}/>
-                                </div>
+                      <div className="grid justify-center mt-">
+                            <div className="flex items-center">
+                                <div className="border border-slate-400 mr-4 w-40"></div>
+                                <div> <BsFlower2 color="fuchsia"  size={35}/></div>
+                                <div className="border border-slate-800 ml-4 w-40"></div>
                             </div>
                         </div>
-                    </div>
                     <h1 className="font-hurricane text-3xl text-center ">Easy to Give. Delicious to Enjoy</h1>
                     <div className="flex justify-center text-center mt-10 mb-20">
                         <div className="inline-block mt-4">
