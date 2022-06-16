@@ -7,17 +7,17 @@ export default function Service6(){
       <div className="inline-block mt-4">
           <div className="inline-block mx-4">
           <div className='flex justify-center'>
-          <div class="card w-96 bg-base-100 shadow-xl">
+          <div className="card w-96 bg-base-100 shadow-xl">
           <figure><img className="transform duration-1000 hover:scale-125 cursor-pointer" src="/img/skinnn.jpg" alt="Shoes" /></figure>
-                  <div class="card-body">
-                    <h2 class="card-title ml-20">
+                  <div className="card-body">
+                    <h2 className="card-title ml-20">
                       Ботокс
-                      <div class="badge badge-secondary">BOTOX</div>
+                      <div className="badge badge-secondary">BOTOX</div>
                     </h2>
                     <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div class="card-actions justify-end">
-                      <div class="badge badge-outline">Service</div> 
-                      <div class="badge badge-outline">Botox</div>
+                    <div className="card-actions justify-end">
+                      <div className="badge badge-outline">Service</div> 
+                      <div className="badge badge-outline">Botox</div>
                     </div>
                   </div>
                 </div>
@@ -25,17 +25,17 @@ export default function Service6(){
           </div>
           <div className="inline-block mx-4">
               <div className='flex '>
-              <div class="card w-96 bg-base-100 shadow-xl">
+              <div className="card w-96 bg-base-100 shadow-xl">
                   <figure><img className="transform duration-1000 hover:scale-125 cursor-pointer" src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
-                  <div class="card-body">
-                    <h2 class="card-title ml-20">
+                  <div className="card-body">
+                    <h2 className="card-title ml-20">
                       Филлер
-                      <div class="badge badge-secondary">FILLER</div>
+                      <div className="badge badge-secondary">FILLER</div>
                     </h2>
                     <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div class="card-actions justify-end">
-                      <div class="badge badge-outline">Service</div> 
-                      <div class="badge badge-outline">Filler</div>
+                    <div className="card-actions justify-end">
+                      <div className="badge badge-outline">Service</div> 
+                      <div className="badge badge-outline">Filler</div>
                     </div>
                   </div>
                 </div>
@@ -43,17 +43,17 @@ export default function Service6(){
           </div>
           <div className="inline-block mx-4">
           <div className='flex justify-center'>
-          <div class="card w-96 bg-base-100 shadow-xl">
+          <div className="card w-96 bg-base-100 shadow-xl">
                   <figure><img className="transform duration-1000 hover:scale-125 cursor-pointer" src="/img/skinnn.jpg" alt="Shoes" /></figure>
-                  <div class="card-body">
-                    <h2 class="card-title ml-24">
+                  <div className="card-body">
+                    <h2 className="card-title ml-24">
                       Шивээс
-                      <div class="badge badge-secondary">TATTOO</div>
+                      <div className="badge badge-secondary">TATTOO</div>
                     </h2>
                     <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div class="card-actions justify-end">
-                      <div class="badge badge-outline">Service</div> 
-                      <div class="badge badge-outline">Tattoo</div>
+                    <div className="card-actions justify-end">
+                      <div className="badge badge-outline">Service</div> 
+                      <div className="badge badge-outline">Tattoo</div>
                     </div>
                   </div>
                 </div>
@@ -65,17 +65,17 @@ export default function Service6(){
     <div className="inline-block mt-4">
         <div className="inline-block mx-4">
         <div className='flex justify-center'>
-        <div class="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-96 bg-base-100 shadow-xl">
         <figure><img className="transform duration-1000 hover:scale-125 cursor-pointer" src="/img/skinnn.jpg" alt="Shoes" /></figure>
-                  <div class="card-body">
-                    <h2 class="card-title ml-4">
+                  <div className="card-body">
+                    <h2 className="card-title ml-4">
                       Дархлаа дэмжих дусалууд
-                      <div class="badge badge-secondary">NEW</div>
+                      <div className="badge badge-secondary">NEW</div>
                     </h2>
                     <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div class="card-actions justify-end">
-                      <div class="badge badge-outline">Service</div> 
-                      <div class="badge badge-outline">New</div>
+                    <div className="card-actions justify-end">
+                      <div className="badge badge-outline">Service</div> 
+                      <div className="badge badge-outline">New</div>
                     </div>
                   </div>
                 </div>
@@ -83,17 +83,17 @@ export default function Service6(){
         </div>
         <div className="inline-block mx-4">
         <div className='flex justify-center'>
-        <div class="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-96 bg-base-100 shadow-xl">
         <figure><img className="transform duration-1000 hover:scale-125 cursor-pointer" src="/img/skinnn.jpg" alt="Shoes" /></figure>
-          <div class="card-body">
-            <h2 class="card-title ml-10">
+          <div className="card-body">
+            <h2 className="card-title ml-10">
               Арьс арчилгаа
-              <div class="badge badge-secondary">SKIN CARE</div>
+              <div className="badge badge-secondary">SKIN CARE</div>
             </h2>
             <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end">
-              <div class="badge badge-outline">Service</div> 
-              <div class="badge badge-outline">Skin care</div>
+            <div className="card-actions justify-end">
+              <div className="badge badge-outline">Service</div> 
+              <div className="badge badge-outline">Skin care</div>
             </div>
           </div>
         </div>
@@ -101,17 +101,17 @@ export default function Service6(){
         </div>
         <div className="inline-block mx-4">
         <div className='flex justify-center'>
-        <div class="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-96 bg-base-100 shadow-xl">
         <figure><img className="transform duration-1000 hover:scale-125 cursor-pointer" src="/img/skinnn.jpg" alt="Shoes" /></figure>
-                  <div class="card-body">
-                    <h2 class="card-title">
+                  <div className="card-body">
+                    <h2 className="card-title">
                       Shoes!
-                      <div class="badge badge-secondary uppercase">Skin booster</div>
+                      <div className="badge badge-secondary uppercase">Skin booster</div>
                     </h2>
                     <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div class="card-actions justify-end">
-                      <div class="badge badge-outline">Fashion</div> 
-                      <div class="badge badge-outline">Products</div>
+                    <div className="card-actions justify-end">
+                      <div className="badge badge-outline">Fashion</div> 
+                      <div className="badge badge-outline">Products</div>
                     </div>
                   </div>
                 </div>
