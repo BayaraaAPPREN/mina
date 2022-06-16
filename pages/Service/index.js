@@ -1,6 +1,7 @@
 import Navbar from "../../components/Navbar";
 import { BsFlower2 } from 'react-icons/bs';
 import ProductService from "../../components/ProductService";
+import Service6 from "../../components/Service6/index"
 
 
 export default function Service(){
@@ -24,7 +25,7 @@ export default function Service(){
             <ProductService/>
             <div >
                 <div className="bg-back">
-                    <h1 className="text-center pt-10 text-2xl font-gentium">Welcome to Skin Laundry</h1>
+                    <h1 className="text-center pt-10 text-2xl font-gentium">Санал болгож буй үйлчилгээ</h1>
                     <div className="grid justify-center mt-">
                             <div className="flex items-center">
                                 <div className="border border-slate-400 mr-4 w-40"></div>
@@ -32,10 +33,10 @@ export default function Service(){
                                 <div className="border border-slate-800 ml-4 w-40"></div>
                             </div>
                         </div>
-                    <h1 className="font-hurricane text-3xl text-center ">Easy to Give. Delicious to Enjoy</h1>
-                    {/* <div>
-                       <ServiceCard/>
-                    </div> */}
+                    <h1 className="font-hurricane text-3xl text-center ">Service</h1>
+                  <div className="">
+                    <Service6/>
+                  </div>
                 </div>
             </div>
         </div>
