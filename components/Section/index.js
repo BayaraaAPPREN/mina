@@ -5,9 +5,9 @@ export default function Section(){
     return(
         <div className="bg-back mt-1">
             <div className='grid justify-center items-center'>
-                <div className='flex items-center py-28'>
+                <div className='flex justify-center items-center flex-wrap py-28'>
                     <div className="inline-block">
-                        <h1 className="text-4xl">Glow Your Face &</h1>
+                        <h1 className="text-4xl ">Glow Your Face &</h1>
                         <h1 className="text-4xl">Vitality With Our </h1>
                         <h1 className="mt-4">Culpa fuga animi libero quae. Perspiciatis </h1>
                         <h1 className="">fugiat nemo dicta</h1>
