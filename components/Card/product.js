@@ -2,9 +2,9 @@
 const AdminProductComp = ({ jobSalary, title, img }) => {
     return(
         <div className="p-4">
-            <div class="card w-60 bg-base-100 shadow-xl">
+            <div className="card w-60 bg-base-100 shadow-xl">
             <figure><img className="h-40" src={img} alt="Shoes" /></figure>
-            <div class="card-body">
+            <div className="card-body">
                 <div className="flex">
                    <h1 className="mx-4 ">Нэр :</h1>
                    <h1>{title}</h1>
