@@ -19,11 +19,11 @@ export default function Navbar() {
                 <img src="https://img.icons8.com/material-outlined/24/000000/menu--v4.png"/>
               </button>
               <ul  className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-                <li><a href='/'>Нүүр</a></li>
-                <li><a href='/Aboutus'>Бидний тухай</a></li>
-                <li><a href='/Service'>Үйлчилгээ</a></li>
-                <li><a href='/Product'>Бүтээгдэхүүн</a></li>
-                <li><a href='/Aboutus'>Бидэнтэй холбогдох</a></li>
+                <li><Link href='/'><a>Нүүр</a></Link></li>
+                <li><Link href='/Aboutus'><a>Бидний тухай</a></Link></li>
+                <li><Link href='/Service'><a>Үйлчилгээ</a></Link></li>
+                <li><Link href='/Product'><a>Бүтээгдэхүүн</a></Link></li>
+                <li><Link href='/Aboutus'><a>Бидэнтэй холбогдох</a></Link></li>
               </ul>
             </div>
           </div>
