@@ -1,6 +1,5 @@
 
 import Link from 'next/link'
-import Menuu from '../Menu'
 
 
 export default function Navbar() {
@@ -15,11 +14,11 @@ export default function Navbar() {
               <h1 className='md:text-4xl xs:xl'>SKIN LAUNDRY</h1>
           </div>
           <div className='xs:visible hidden xs:block md:invisible ml-16'>
-            <div class="dropdown dropdown-end">
-              <button  tabindex="0">
+            <div className="dropdown dropdown-end">
+              <button  >
                 <img src="https://img.icons8.com/material-outlined/24/000000/menu--v4.png"/>
               </button>
-              <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+              <ul  className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                 <li><a href='/'>Нүүр</a></li>
                 <li><a href='/Aboutus'>Бидний тухай</a></li>
                 <li><a href='/Service'>Үйлчилгээ</a></li>
