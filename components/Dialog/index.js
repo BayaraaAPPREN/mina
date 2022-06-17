@@ -1,5 +1,6 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
+import Link from 'next/link'
 
 export default function DialogModal() {
   let [isOpen, setIsOpen] = useState(false)
@@ -15,9 +16,11 @@ export default function DialogModal() {
   return (
     <>
       <div className="">
-         <div className="border-2 border-nogoon rounded-full w-14 h-14 p-4 grid items-center" onClick={openModal}>
+        <Link href="/https://www.youtube.com/watch?v=R1B5ffdtWfI">
+         <div className="border-2 border-nogoon rounded-full w-14 h-14 p-4 grid items-center" onClick={closeModal}>
             <img className="hover:bg-white" src="/img/icon/icon.png"/>
          </div>
+         </Link>
       </div>
 
       <Transition appear show={isOpen} as={Fragment}>

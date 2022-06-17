@@ -1,5 +1,4 @@
-import moment from "moment"
-import { AiFillStar } from 'react-icons/ai';
+
 import { GrStar } from  'react-icons/gr';
 
 const CompProduct = ({ id, jobSalary, title, detail, img }) => {

@@ -5,7 +5,7 @@ import { addDoc, collection, serverTimestamp } from "@firebase/firestore"
 import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 import { storage } from "../../firebase";
 
- function DialogJob() {
+ function AdminDialogPropduct() {
   const [zar, setZar] = useState({ title: "", detail: "", jobSalary: "", type: "", img: ""});
   const [imgUrl, setImgUrl] = useState(null);
   const [progresspercent, setProgresspercent] = useState(0);
@@ -13,7 +13,7 @@ import { storage } from "../../firebase";
 
   const onSubmit = async () => {
    
-    const collectionRef = collection(db, "product")
+    const collectionRef = collection(db, "service")
     const docRef = await addDoc(collectionRef, {...zar, timestamp:
     serverTimestamp() })
     setZar({ title: '', detail: '', jobSalary: '', type: '', img: '',})
@@ -33,11 +33,11 @@ const handleSubmit = (e) => {
   const uploadTask = uploadBytesResumable(storageRef, file);
 
   uploadTask.on("state_changed",
-    (snapshot) => {
-      const progress =
-        Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
-      setProgresspercent(progress);
-    },
+  (snapshot) => {
+    const progress =
+      Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
+    
+  },
     (error) => {
       alert(error);
     },
@@ -47,6 +47,8 @@ const handleSubmit = (e) => {
         setImgUrl(downloadURL)
         console.log(downloadURL)
         setZar({...zar, img:downloadURL})
+        setProgresspercent(progress);
+        
       });
     }
   );
@@ -71,7 +73,7 @@ function logValue() {
         <button
           type="button"
           onClick={openModal}
-          className="rounded-md bg-lime-500 text-sm font-medium text-white hover:bg-lime-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 "
+          className="rounded-md  text-sm font-sans text-white  focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 "
         >
             Нэмэх
         </button>
@@ -87,7 +89,7 @@ function logValue() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black bg-opacity-25" />
+            <div className="fixed inset-0 bg-nogoon bg-opacity-25" />
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
@@ -104,13 +106,13 @@ function logValue() {
                 <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                   <Dialog.Title
                     as="h3"
-                    className="text-lg font-medium leading-6 text-gray"
+                    className="text-lg font-sans leading-6 text-gray"
                   >
-                    Цагын ажлын зараа оруулаарай
+                    Үйлчилгээгээ оруулаарай
                   </Dialog.Title>
                   <div className="mt-2 text-sm text-gray">
-                    <h1 className='mb-2'>Гарчиг</h1>
-                    <input id="title" type="text" name="title" className="text-sm sm:text-base placeholder-graybudeg pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Гарчиг"
+                    <h1 className='mb-2'>Үйлчилгээний нэр</h1>
+                    <input id="title" type="text" name="title" className="text-sm sm:text-base placeholder-graybudeg pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Үйлчилгээний нэр"
                     value={zar.title}
                     onChange={ e => setZar({...zar, title:e.target.value})}
                     />
@@ -118,7 +120,7 @@ function logValue() {
 
                   <div className="mt-2 text-sm text-gray">
                     <h1 className='mb-2'>Нэмэлт мэдээлэл</h1>
-                    <textarea id="title" type="text" name="title" className="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Нэмэлт мэдээлэл" 
+                    <textarea id="title" type="text" name="title" className="text-sm sm:text-base placeholder-gray pl-10 pr-4 rounded-lg border border-gray w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Нэмэлт мэдээлэл" 
                     value={zar.detail}
                     onChange={ e => setZar({...zar, detail:e.target.value})}
                     />
@@ -145,29 +147,32 @@ function logValue() {
                   </div>
 
                   <div className="mt-2 text-sm text-gray-500">
-                    <h1 className='mb-2'>Бүтээгдэхүүний үнэ</h1>
-                    <input id="title" type="text" name="title" className="text-sm placeholder:text-xs sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" 
+                    <h1 className='mb-2'>Үйлчилгээний үнэ</h1>
+                    <input id="title" type="text" name="title" className="text-sm placeholder:text-xs sm:text-base placeholder-gray pl-10 pr-4 rounded-lg border border-gray w-full py-2 focus:outline-none focus:border-blue-400" 
                     value={zar.jobSalary}
                     onChange={ e => setZar({...zar, jobSalary:e.target.value})}
-                    placeholder="Бүтээгдэхүүний үнэ" />
+                    placeholder="Үйлчилгээний үнэ" />
                   </div>
                   <div className="mt-2 text-sm text-gray-500">
-                    <h1 className='mb-2'>Зарын хэлбэр</h1>
-                    <select id="title" type="text" name="title" className="text-sm placeholder:text-xs sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Ажлын зар бол ажлын хөлс / Түрээсийн зар бол түрээслэх үнэ" 
+                    <h1 className='mb-2'>Үйлчилгээний төрөл</h1>
+                    <select id="title" type="text" name="title" className="text-sm placeholder:text-xs sm:text-base placeholder-gray pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-silver" placeholder="Ажлын зар бол ажлын хөлс / Түрээсийн зар бол түрээслэх үнэ" 
                     value={zar.type}
                     onChange={ e => setZar({...zar, type:e.target.value})}
                     >
-                      <option selected value="CHECK" className='rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400 '>Сонгоорой</option>
-                      <option value="SUPERMARKET" className='rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400 '>Батганы эсрэг</option>
-                      <option value="PAPER" className='rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400 '> Онцлох </option>
-                      <option value="BUSAD" className='rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400 '>Тос</option>
+                      <option selected value="CHECK" className='rounded-lg border border-gray w-full py-2 focus:outline-none focus:border-silver '>Сонгоорой</option>
+                      <option value="BOTOX" className='rounded-lg border border-gray w-full py-2 focus:outline-none focus:border-silver '>Ботокс</option>
+                      <option value="FILLER" className='rounded-lg border border-gray w-full py-2 focus:outline-none focus:border-silver '> Филлер </option>
+                      <option value="TATTOO" className='rounded-lg border border-gray w-full py-2 focus:outline-none focus:border-silver '>Шивээс</option>
+                      <option value="DUSAL" className='rounded-lg border border-gray w-full py-2 focus:outline-none focus:border-silver '>Дусал</option>
+                      <option value="ARIS" className='rounded-lg border border-gray w-full py-2 focus:outline-none focus:border-silver '> Арьс арчилгаа </option>
+                      <option value="BOOSTER" className='rounded-lg border border-gray w-full py-2 focus:outline-none focus:border-silver '>Skin booster</option>
                     </select>
                   </div>
 
                   <div className="mt-4 grid justify-center  ">
                     <button
                       type="button"
-                      className="inline-flex justify-center rounded-md border border-transparent bg-back px-20 py-2 text-sm font-medium transition delay-75 text-blue-900 hover:bg-nogoon hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      className="inline-flex justify-center rounded-md border border-transparent bg-back px-20 py-2 text-sm font-sans transition delay-75 text-blue-900 hover:bg-nogoon hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                       onClick={onSubmit}
                     >
                       Нийтлэх
@@ -183,4 +188,4 @@ function logValue() {
   )
 }
 
-export default DialogJob
+export default AdminDialogPropduct
