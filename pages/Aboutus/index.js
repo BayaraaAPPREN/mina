@@ -7,6 +7,7 @@ import {BsFlower2} from 'react-icons/bs'
 import AboutSec from "../../components/AboutSec";
 import About1sec from "../../components/About1sec";
 import Team from "../../components/Team";
+import History from "../../components/History";
 
 
 export default function Aboutus(){
@@ -40,25 +41,7 @@ export default function Aboutus(){
                             </div>
                         </div>
                     <h1 className="font-hurricane text-3xl text-center text-fuchsia">We History</h1>
-                    <div className="grid xs:grid-cols-1 md:grid-cols-2 justify-center mt-10 mb-20">
-                       <div className="grid col-span-1">
-                           <div className="flex justify-center">
-                               <div className="h-96 bg-[url('/img/background1.png')]">
-                                      <img className="h-80 " src="/img/pone.png"/>
-                               </div>
-                           </div>
-                       </div>
-                       <div className="grid col-span-1">
-                           <div className="flex justify-center">
-                               <div className="mr-40 mt-10">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
-                                <p>Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!</p>
-                                <p>Tenetur quod quidem in voluptatem corporis dolorum dicta sit pariatur porro quaerat autem ipsam odit quam beatae tempora quibusdam illum! Modi velit odio nam nulla unde amet odit pariatur at!</p>
-                                <p>Consequatur rerum amet fuga expedita sunt et tempora saepe? Iusto nihil explicabo perferendis quos provident delectus ducimus necessitatibus reiciendis optio tempora unde earum doloremque commodi laudantium ad nulla vel odio?</p>
-                               </div>
-                           </div>
-                       </div>
-                    </div>
+                    <History/>
                     <About1sec/>
                     <AboutSec/>
                     <Team/>

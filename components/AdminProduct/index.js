@@ -24,8 +24,8 @@ import { useState } from "react"
            <div className="grid md:grid-cols-4 lg:grid-cols-6 mt-10">
             <div className="grid col-span-1"> </div>
             <div className="grid col-span-4">
-                <div className="inline-block mb-8">
-                   <h1 className="inline-block mr-8">Бүтээгдэхүүн</h1>
+                <div className="inline-block mb-8 flex justify-center">
+                   <h1 className="inline-block mr-8 ">Бүтээгдэхүүн</h1>
                    <button className="bg-nogoon px-6 inline-block hover:bg-green py-2 rounded-lg text-white"><DialogJob/></button>
                 </div>
                 <div className="bg-back rounded-lg">
@@ -33,6 +33,7 @@ import { useState } from "react"
                        <div className="">
                        <div className="grid justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 ">
                                     {zar.map(zar => <AdminProductComp key={zar.id}
+                                        id={zar.id}
                                         title={zar.title}
                                         img={zar.img}
                                         jobSalary={zar.jobSalary}

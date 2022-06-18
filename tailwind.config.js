@@ -43,6 +43,8 @@ module.exports = {
     fontFamily: {
       'sans': 'serif',
       'hurricane':'Hurricane',
+      'SecularOne':'SecularOne',
+
     },
     colors: {
       transparent: 'transparent',
@@ -58,6 +60,7 @@ module.exports = {
       'graybudeg':'#87797A',
       'black': '#000000',
       'red': '#dc2626',
+      'red1': '#f87171',
       'silver': '#ecebff',
       'bubble-gum': '#ff77e9',
       'bermuda': '#78dcca',
@@ -68,7 +71,13 @@ module.exports = {
     //   'gentium': 'Gentium Plus',
     //   'vibes': 'Great Vibes',
     // },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'uilchilgee': "url('/img/uilchilgee.png')",
+        'zurag1': "url('/img/skinnn.jpg')",
+        'footer-texture': "url('/img/footer-texture.png')",
+      }
+    },
   },
   plugins: [require("daisyui")],
 }

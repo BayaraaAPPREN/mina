@@ -1,6 +1,11 @@
 import Head from 'next/head'
+import About1sec from '../components/About1sec'
+import Footer from '../components/Footer'
+import History from '../components/History'
 import Navbar from '../components/Navbar'
+import ProductService from '../components/ProductService'
 import Section from '../components/Section'
+import Team from '../components/Team'
 
 export default function Home() {
   return (
@@ -12,6 +17,11 @@ export default function Home() {
       </Head>
       <Navbar/>
       <Section/>
+      <ProductService/>
+      <About1sec/>
+      <Team/>
+      <History/>
+      <Footer/>
    </div>
   )
 }

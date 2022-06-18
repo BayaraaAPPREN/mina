@@ -9,6 +9,7 @@ import Card from "../../components/Card/botox";
 import { collection, onSnapshot, orderBy, query, where } from "firebase/firestore";
 import { db } from "../../firebase"
 import { useState } from "react"
+import Footer from "../../components/Footer";
 
 
 export default function SkinCare(){
@@ -73,6 +74,7 @@ export default function SkinCare(){
                             </div>
                     </div>
             </div>
+            <Footer/>
         </div>
     )
 }

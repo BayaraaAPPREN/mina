@@ -5,7 +5,7 @@ import { addDoc, collection, serverTimestamp } from "@firebase/firestore"
 import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 import { storage } from "../../firebase";
 
- function AdminDialogPropduct() {
+ function AdminDialogService() {
   const [zar, setZar] = useState({ title: "", detail: "", jobSalary: "", type: "", img: ""});
   const [imgUrl, setImgUrl] = useState(null);
   const [progresspercent, setProgresspercent] = useState(0);
@@ -13,7 +13,7 @@ import { storage } from "../../firebase";
 
   const onSubmit = async () => {
    
-    const collectionRef = collection(db, "product")
+    const collectionRef = collection(db, "service")
     const docRef = await addDoc(collectionRef, {...zar, timestamp:
     serverTimestamp() })
     setZar({ title: '', detail: '', jobSalary: '', type: '', img: '',})
@@ -108,11 +108,11 @@ function logValue() {
                     as="h3"
                     className="text-lg font-sans leading-6 text-gray"
                   >
-                    Бүтээгдэхүүнээ оруулаарай
+                    Үйлчилгээгээ оруулаарай
                   </Dialog.Title>
                   <div className="mt-2 text-sm text-gray">
-                    <h1 className='mb-2'>Бүтээгдэхүүний нэр</h1>
-                    <input id="title" type="text" name="title" className="text-sm sm:text-base placeholder-graybudeg pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Бүтээгдэхүүний нэр"
+                    <h1 className='mb-2'>Үйлчилгээний нэр</h1>
+                    <input id="title" type="text" name="title" className="text-sm sm:text-base placeholder-graybudeg pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Үйлчилгээний нэр"
                     value={zar.title}
                     onChange={ e => setZar({...zar, title:e.target.value})}
                     />
@@ -147,21 +147,25 @@ function logValue() {
                   </div>
 
                   <div className="mt-2 text-sm text-gray-500">
-                    <h1 className='mb-2'>Бүтээгдэхүүний үнэ</h1>
+                    <h1 className='mb-2'>Үйлчилгээний үнэ</h1>
                     <input id="title" type="text" name="title" className="text-sm placeholder:text-xs sm:text-base placeholder-gray pl-10 pr-4 rounded-lg border border-gray w-full py-2 focus:outline-none focus:border-blue-400" 
                     value={zar.jobSalary}
                     onChange={ e => setZar({...zar, jobSalary:e.target.value})}
-                    placeholder="Бүтээгдэхүүний үнэ" />
+                    placeholder="Үйлчилгээний үнэ" />
                   </div>
                   <div className="mt-2 text-sm text-gray-500">
-                    <h1 className='mb-2'>Бүтээгдэхүүний төрөл</h1>
+                    <h1 className='mb-2'>Үйлчилгээний төрөл</h1>
                     <select id="title" type="text" name="title" className="text-sm placeholder:text-xs sm:text-base placeholder-gray pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-silver" placeholder="Ажлын зар бол ажлын хөлс / Түрээсийн зар бол түрээслэх үнэ" 
                     value={zar.type}
                     onChange={ e => setZar({...zar, type:e.target.value})}
                     >
                       <option selected value="CHECK" className='rounded-lg border border-gray w-full py-2 focus:outline-none focus:border-silver '>Сонгоорой</option>
-                      <option value="ONTSLOH" className='rounded-lg border border-gray w-full py-2 focus:outline-none focus:border-silver '>Онцлох Бүтээгдэхүүн</option>
-                      <option value="ENGIIN" className='rounded-lg border border-gray w-full py-2 focus:outline-none focus:border-silver '> Энгийн </option>
+                      <option value="BOTOX" className='rounded-lg border border-gray w-full py-2 focus:outline-none focus:border-silver '>Ботокс</option>
+                      <option value="FILLER" className='rounded-lg border border-gray w-full py-2 focus:outline-none focus:border-silver '> Филлер </option>
+                      <option value="TATTOO" className='rounded-lg border border-gray w-full py-2 focus:outline-none focus:border-silver '>Шивээс</option>
+                      <option value="DUSAL" className='rounded-lg border border-gray w-full py-2 focus:outline-none focus:border-silver '>Дусал</option>
+                      <option value="ARIS" className='rounded-lg border border-gray w-full py-2 focus:outline-none focus:border-silver '> Арьс арчилгаа </option>
+                      <option value="BOOSTER" className='rounded-lg border border-gray w-full py-2 focus:outline-none focus:border-silver '>Skin booster</option>
                     </select>
                   </div>
 
@@ -184,4 +188,4 @@ function logValue() {
   )
 }
 
-export default AdminDialogPropduct
+export default AdminDialogService

@@ -1,13 +1,13 @@
 import AdminNavbar from '../../components/AdminNavbar/index'
 import AdminProduct from '../../components/AdminProduct'
-import AdminSection from '../../components/AdminSection'
+// import AdminSection from '../../components/AdminSection'
 import AdminService from '../../components/AdminService'
 
  function Admin(){
     return(
     <div>
          <AdminNavbar/>
-         <AdminSection/>
+         {/* <AdminSection/> */}
          <AdminProduct/>
          <AdminService/>
     </div>

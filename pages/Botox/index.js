@@ -9,6 +9,7 @@ import Card from "../../components/Card/botox";
 import { collection, onSnapshot, orderBy, query, where } from "firebase/firestore";
 import { db } from "../../firebase"
 import { useState } from "react"
+import Footer from "../../components/Footer/index"
 
 
 export default function Botox(){
@@ -73,6 +74,7 @@ export default function Botox(){
                             </div>
                     </div>
             </div>
+            <Footer/>
         </div>
     )
 }

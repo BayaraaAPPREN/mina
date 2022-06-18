@@ -12,7 +12,7 @@ export default function About1sec(){
                    </div>
                    <div className=" grid col-span-1">
                    <div className="bg-slate1">
-                           <div className="grid justify-start mr-20 mx-20 py-16">
+                           <div className="grid justify-start mr-20 md:mx-20 xs:mx-6 py-16">
                                <div>
                                    <h1 className="flex justify-start">bring hhdb hihi</h1>
                                    <h1 className="text-3xl text-fuchsia1 mb-2">Бидний үзэл баримтлал</h1>

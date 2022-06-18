@@ -11,7 +11,9 @@ export default function Navbar() {
               <img className='h-20' src='/img/noTextT.png '/>
           </div> 
           <div className='inline-block ml-8 cursor-pointer'>
+              <Link href="/">
               <h1 className='md:text-4xl xs:xl'>SKIN LAUNDRY</h1>
+              </Link>
           </div>
           <div className='xs:visible hidden xs:block md:invisible ml-16'>
             <div className="dropdown dropdown-end">

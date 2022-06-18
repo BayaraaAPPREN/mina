@@ -4,6 +4,7 @@ import AdminDialogPropduct from "../AdminDialogPropduct";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import { db } from "../../firebase"
 import { useState } from "react"
+import AdminDialogService from "../AdminDialogService";
 
 
  function AdminService(){
@@ -24,9 +25,9 @@ import { useState } from "react"
            <div className="grid md:grid-cols-4 lg:grid-cols-6 mt-10">
             <div className="grid col-span-1"> </div>
             <div className="grid col-span-4">
-                <div className="inline-block mb-8">
+                <div className="inline-block mb-8 flex justify-center">
                    <h1 className="inline-block mr-8">Бүтээгдэхүүн</h1>
-                   <button className="bg-nogoon px-6 inline-block py-2 rounded-lg text-white"><AdminDialogPropduct/></button>
+                   <button className="bg-nogoon px-6 inline-block py-2 rounded-lg text-white"><AdminDialogService/></button>
                 </div>
                 <div className="bg-back rounded-lg">
                 <div className="flex justify-center text-center mt-10 mb-20">

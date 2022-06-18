@@ -3,7 +3,7 @@ import { BsFlower1 } from 'react-icons/bs';
 export default function AboutSec(){
     return(
         <div>
-                    <div className=" w-screen bg-back py-8">
+                    <div className="bg-cover bg-center bg-uilchilgee py-8">
                     <div className="flex justify-center text-center my-10">
                         <div className="inline-block mt-4">
                             <div className="inline-block mx-1 pb-4">

@@ -2,20 +2,18 @@
 import { collection, onSnapshot, orderBy, query, where } from "firebase/firestore";
 import { db } from "../../firebase"
 import Navbar from "../../components/Navbar";
-import { BsFlower1 } from 'react-icons/bs';
 import { BsFlower2 } from 'react-icons/bs'
 import CompProduct from "../../components/CompProduct";
 import { useState } from "react"
 import Footer from "../../components/Footer";
 import ProductOntslog from "../../components/ProductOntslog";
-import Link from "next/link"
 
 
-export default function Product(){
+export default function Productbvh(){
     const [zar, setZar] = useState([])
 
     const collectionRef = collection(db , "product")
-            const q = query(collectionRef, orderBy("timestamp", "desc"),  where('type', '==', 'ONTSLOH'));
+            const q = query(collectionRef, orderBy("timestamp", "desc"),  where('type', '==', 'ENGIIN'));
             const unsubscribe = onSnapshot(q, (querySnapshot) => {
                 setZar(querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id,
                 timestamp: doc.data().
@@ -44,7 +42,7 @@ export default function Product(){
               </div>
             <div>
                 <div>
-                    <h1 className="text-center mt-10 text-2xl font-gentium">Онцлох Бүтээгдэхүүн</h1>
+                    <h1 className="text-center mt-10 text-2xl font-gentium">Бүтээгдэхүүн</h1>
                        <div className="grid justify-center mt-">
                             <div className="flex items-center">
                                 <div className="border border-slate-400 mr-4 w-40"></div>
@@ -69,18 +67,11 @@ export default function Product(){
                         </div>
                        </div>
                     </div>
-                    <div className="flex items-center justify-center cursor-pointer">
-                          <Link href="/Productbvh">
-                             <h1 className="text-center mr-2 hover:text-fuchsia">БУСАД БҮТЭЭГДЭХҮҮН</h1>
-                          </Link>
-                          <img src="/img/icon/arrow.png"/>
-                    </div>
                 </div>
                
                 <div className="container mb-20">
                 </div>
             </div>
-            <ProductOntslog/>
             <Footer/>
         </div>
     )
