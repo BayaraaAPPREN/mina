@@ -19,7 +19,7 @@ export default function Team(){
                         <div className='grid col-span-1'>
                            <div className='flex justify-center'>
                                <div className='m-4'>
-                                   <img src='/img/member.png'/>
+                                   <img src='/img/user.png'/>
                                    <h1 className='text-center'>Ж. Эгшиглэн</h1>
                                    <h1 className='text-center text-fuchsia'>Ерөнхий эмч</h1>
                                    <div className='flex justify-center m-2'>
@@ -31,7 +31,7 @@ export default function Team(){
                         <div className='grid col-span-1'>
                            <div className='flex justify-center'>
                                <div className='m-4'>
-                                   <img src='/img/member.png'/>
+                                   <img src='/img/user.png'/>
                                    <h1 className='text-center'>Ж. Эгшиглэн</h1>
                                    <h1 className='text-center text-fuchsia'>Ерөнхий эмч</h1>
                                    <div className='flex justify-center m-2'>
@@ -43,7 +43,7 @@ export default function Team(){
                         <div className='grid col-span-1'>
                            <div className='flex justify-center'>
                                <div className='m-4'>
-                                  <img src='/img/member.png'/>
+                                  <img src='/img/user.png'/>
                                   <h1 className='text-center'>Ж. Эгшиглэн</h1>
                                   <h1 className='text-center text-fuchsia'>Ерөнхий эмч</h1>
                                   <div className='flex justify-center m-2'>
