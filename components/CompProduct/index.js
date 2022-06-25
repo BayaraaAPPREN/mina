@@ -6,7 +6,7 @@ const CompProduct = ({ id, jobSalary, title, detail, img }) => {
         <div className="">
             <div className="">
                 <div className="grid justify-center">
-                    <img className="p-2 mx-4 transform duration-1000 hover:scale-125 cursor-pointer" src={img}/>
+                    <img className="p-2 mx-2 h-96 w-80" src={img}/>
                     <h1 className=" text-lg text-center mb-1 ">{title}</h1>
                     <div className="flex justify-center mb-2">
                        <GrStar size={20}/>

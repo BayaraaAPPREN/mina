@@ -1,13 +1,26 @@
 import AdminNavbar from '../../components/AdminNavbar/index'
 import AdminProduct from '../../components/AdminProduct'
-// import AdminSection from '../../components/AdminSection'
+import { useRouter } from 'next/router';
 import AdminService from '../../components/AdminService'
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from '../../firebase'
 
  function Admin(){
+     const router = useRouter()
+
+     onAuthStateChanged(auth, (user) => {
+          if (user) {
+              const uid = user.uid;
+              console.log(user.uid)
+              // ...
+          } else {
+              router.push("/Login")
+          }
+          });
+
     return(
     <div>
          <AdminNavbar/>
-         {/* <AdminSection/> */}
          <AdminProduct/>
          <AdminService/>
     </div>
