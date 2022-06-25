@@ -43,7 +43,7 @@ export default function Login(){
               </div>
             <div className="my-10">
                <div className="flex justify-center ">
-                 <input type="text" placeholder="Нэвтрэх нэр" class="input input-bordered input-accent w-full max-w-xs"
+                 <input type="text" placeholder="Нэвтрэх нэр" className="input input-bordered input-accent w-full max-w-xs"
                   value={loginEmail}
                   onChange={(e) => {
                      setLoginEmail(e.target.value);
@@ -51,7 +51,7 @@ export default function Login(){
                  />
                </div>
                <div className="flex justify-center mt-4">
-                 <input type="password" placeholder="Нууц үг" class="input input-bordered input-accent w-full max-w-xs"
+                 <input type="password" placeholder="Нууц үг" className="input input-bordered input-accent w-full max-w-xs"
                   value={loginPassword}
                   onChange={(e) => {
                       setLoginPassword(e.target.value);
