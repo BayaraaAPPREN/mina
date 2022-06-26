@@ -4,12 +4,12 @@
 
 // import Navbar from "../../components/Navbar";
 // import { useState } from 'react'
-// import { useRouter } from 'next/router';
+// // import { useRouter } from 'next/router';
 // import { signInWithEmailAndPassword } from "firebase/auth";
 // import { auth } from '../../firebase'
 
 // export default function Login(){
-//     const router = useRouter()
+//     // const router = useRouter()
 //     const [loginEmail, setLoginEmail] = useState("");
 //     const [loginPassword, setLoginPassword] = useState("");
 
@@ -17,7 +17,7 @@
 //         try {
 //           const user = await signInWithEmailAndPassword( auth, loginEmail, loginPassword );
 //           console.log(user);
-//           router.push("/Baraa")
+//           // router.push("/Baraa")
 //         } catch (error) {
 //           console.log(error.message);
 //           alert("Нууц үг нэвтрэх нэрээ шалгана уу!!!")
@@ -65,3 +65,10 @@
 //         </div>
 //     )
 // }
+export default function Login(){
+  return(
+    <div>
+      hahah
+    </div>
+  )
+}
