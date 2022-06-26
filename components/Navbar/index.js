@@ -1,21 +1,27 @@
 
 import Link from 'next/link'
+import Mobile from './mobile'
 
 
 export default function Navbar() {
   return (
-   <div className='bg-back w-full'> 
+   <div className='bg-back w-full z-10'> 
      <div className='grid justify-center items-center'>
         <div className='flex items-center mb-4 mt-2 '>
           <div className='inline-block'>
+            <Link href="/Baraa">
               <img className='h-20' src='/img/noTextT.png '/>
+            </Link>
           </div> 
           <div className='inline-block ml-8 cursor-pointer'>
               <Link href="/">
               <h1 className='md:text-4xl xs:xl'>SKIN LAUNDRY</h1>
               </Link>
           </div>
-          <div className='xs:visible hidden xs:block md:invisible ml-16'>
+          <div>
+            <Mobile/>
+          </div>
+          {/* <div className='xs:visible hidden xs:block md:invisible ml-16'>
             <div className="dropdown dropdown-end">
               <button  >
                 <img src="https://img.icons8.com/material-outlined/24/000000/menu--v4.png"/>
@@ -28,7 +34,7 @@ export default function Navbar() {
                 <li><Link href='/Aboutus'><a>Бидэнтэй холбогдох</a></Link></li>
               </ul>
             </div>
-          </div>
+          </div> */}
           <div className='ml-20 cursor-pointer xs:invisible hidden md:block md:visible'>
               <Link href="/">
                 <h1 className=''>Нүүр</h1>
