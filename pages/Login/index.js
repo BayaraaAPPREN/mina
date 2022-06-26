@@ -4,7 +4,7 @@
 
 import Navbar from "../../components/Navbar";
 import { useState } from 'react'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../../firebase'
 
@@ -17,7 +17,7 @@ export default function Login(){
         try {
           const user = await signInWithEmailAndPassword( auth, loginEmail, loginPassword );
           console.log(user);
-          router.push("/Admin")
+          router.push("/Baraa")
         } catch (error) {
           console.log(error.message);
           alert("Нууц үг нэвтрэх нэрээ шалгана уу!!!")

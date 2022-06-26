@@ -5,7 +5,7 @@ import AdminService from '../../components/AdminService'
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from '../../firebase'
 
- function Admin(){
+ function Baraa(){
      const router = useRouter()
 
      onAuthStateChanged(auth, (user) => {
@@ -26,4 +26,4 @@ import { auth } from '../../firebase'
     </div>
     )
 }
-export default  Admin
+export default  Baraa
